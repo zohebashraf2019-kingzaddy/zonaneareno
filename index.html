@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zonanea Latin Lounge · La Casa del Perreo · Reno, NV</title>
+  <meta name="description" content="Zonanea Latin Lounge — La Casa del Perreo. Reno's 21+ Latin nightclub for reggaetón, perreo, salsa & bachata. VIP tables, bottle service, themed weekends. 434 N Virginia St, Reno NV. Open Thursday–Sunday." />
+  <meta name="theme-color" content="#060806" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <meta property="og:title" content="Zonanea Latin Lounge · La Casa del Perreo" />
+  <meta property="og:description" content="Reno's 21+ Latin nightclub. Reggaetón, perreo, salsa & bachata — Thursday to Sunday at 434 N Virginia St." />
+  <meta property="og:image" content="assets/img/entrance.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Manrope:wght@300;400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"NightClub","name":"Zonanea Latin Lounge","alternateName":"La Casa del Perreo","address":{"@type":"PostalAddress","streetAddress":"434 N Virginia St","addressLocality":"Reno","addressRegion":"NV","postalCode":"89501","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday","Sunday"]}],"sameAs":["https://www.instagram.com/zonaneareno/","https://www.tiktok.com/@zonanea.reno"]}
+  </script>
+</head>
+<body>
+
+  <!-- ================= 21+ AGE GATE ================= -->
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle" hidden>
+    <div class="age-card">
+      <img src="assets/img/logo.png" alt="Zonanea Latin Lounge" class="age-logo" width="150" height="150" />
+      <p class="script">Bienvenidos a</p>
+      <h2 id="ageTitle">La Casa del Perreo</h2>
+      <p class="age-q">You must be <strong>21 or older</strong> to enter.</p>
+      <div class="age-actions">
+        <button class="btn btn-gold" id="ageYes">I'm 21+ · Enter</button>
+        <a class="btn btn-ghost" href="https://www.google.com" rel="nofollow">Not yet</a>
+      </div>
+      <small>Valid ID required at the door. Please drink responsibly.</small>
+    </div>
+  </div>
+
+  <!-- ================= ALERTA NACIONAL TOAST ================= -->
+  <aside class="alerta" id="alerta" aria-live="polite" hidden>
+    <button class="alerta-x" id="alertaClose" aria-label="Dismiss">&times;</button>
+    <div class="alerta-head">
+      <span class="alerta-icon" aria-hidden="true">⚠️</span>
+      <div><strong>Alerta nacional</strong><span>Este fin de semana</span></div>
+      <em>now</em>
+    </div>
+    <p id="alertaBody">Existe una emergencia real. Hace falta un reggaetón.<br>Mantenga la calma. El perreo viene en camino.</p>
+    <a href="#calendar" class="alerta-foot">📍 Zonanea Latin Lounge · 434 N Virginia St, Reno</a>
+  </aside>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-brand" aria-label="Zonanea home">
+      <img src="assets/img/logo.png" alt="" width="44" height="44" />
+      <span>Zonanea</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#about">The Club</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#reels">Reels</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#vip">VIP & Events</a>
+      <a href="#visit">Visit</a>
+      <a href="#contact" class="btn btn-gold btn-sm nav-cta">Book a Table</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/crowd-lights.jpg">
+        <source src="assets/reels/reel-6.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-shade"></div>
+      <div class="fronds" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow"><span class="dot"></span> Reno, Nevada · 21+ · Thursday – Sunday</p>
+        <img src="assets/img/logo.png" alt="Zonanea Latin Lounge logo" class="hero-logo" width="220" height="220" />
+        <h1 class="hero-title"><span class="foil">Zonanea</span><span class="script hero-sub">Latin Lounge</span></h1>
+        <p class="hero-tag">La Casa del Perreo — reggaetón, perreo, salsa &amp; bachata. VIP vibes, a packed dance floor and unforgettable nights in downtown Reno.</p>
+        <div class="hero-actions">
+          <a href="#calendar" class="btn btn-gold">This Weekend's Lineup</a>
+          <a href="#contact" class="btn btn-ghost">Reserve VIP / Private Event</a>
+        </div>
+        <div class="next-up" id="nextUp" hidden>
+          <span class="next-label">Next night</span>
+          <strong id="nextTitle"></strong>
+          <span id="nextDate"></span>
+          <div class="countdown" id="countdown" aria-label="Countdown to next night"></div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>La Casa del Perreo</span><i>✦</i><span>Reggaetón</span><i>✦</i><span>Perreo Intenso</span><i>✦</i><span>Salsa</span><i>✦</i><span>Bachata</span><i>✦</i><span>Bottle Service</span><i>✦</i><span>VIP Tables</span><i>✦</i><span>21+ Only</span><i>✦</i>
+        <span>La Casa del Perreo</span><i>✦</i><span>Reggaetón</span><i>✦</i><span>Perreo Intenso</span><i>✦</i><span>Salsa</span><i>✦</i><span>Bachata</span><i>✦</i><span>Bottle Service</span><i>✦</i><span>VIP Tables</span><i>✦</i><span>21+ Only</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-media reveal">
+          <figure class="frame-bulbs">
+            <img src="assets/img/entrance.jpg" alt="The red-carpet marquee entrance of Zonanea" loading="lazy" />
+          </figure>
+          <figure class="about-float">
+            <img src="assets/img/dj-booth.jpg" alt="DJ in the booth at Zonanea" loading="lazy" />
+          </figure>
+        </div>
+        <div class="about-copy reveal">
+          <p class="kicker">The Club</p>
+          <h2 class="h2">Downtown Reno's<br><span class="foil">jungle of Latin nightlife</span></h2>
+          <p class="lead">Step under the marquee, across the red carpet and into Zonanea — the Latin lounge where the music stays loud, the shots keep coming and the dance floor doesn't quit until sunrise.</p>
+          <p>Every weekend is a new world: pharaoh's tombs, haunted Halloween takeovers, jungle Saturdays. Resident and guest Latin DJs keep it moving with reggaetón, perreo intenso, salsa, bachata and the Latin hits you came for.</p>
+          <ul class="stats">
+            <li><strong>4</strong><span>Nights a week<br>Thu – Sun</span></li>
+            <li><strong>5AM</strong><span>Dance till<br>sunrise</span></li>
+            <li><strong>21+</strong><span>Grown &amp; sexy<br>only</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrap features">
+        <article class="feature reveal">
+          <span class="f-ico">🔊</span>
+          <h3>The Dance Floor</h3>
+          <p>Full sound, lights and lasers. Perreo, salsa, bachata — every night has a different energy.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="f-ico">🍾</span>
+          <h3>VIP &amp; Bottle Service</h3>
+          <p>Reserved tables, sparklers and bottles delivered to your section. Your night, your crew.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="f-ico">🎭</span>
+          <h3>Themed Weekends</h3>
+          <p>Costumes, set design and themed nights you'll talk about until the next one.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="f-ico">🎧</span>
+          <h3>Latin DJs</h3>
+          <p>Local favorites and guest DJs — check the calendar for each weekend's lineup.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= THIS WEEKEND + CALENDAR ================= -->
+    <section class="section calendar-sec" id="calendar">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="kicker">Lineup &amp; Calendar</p>
+          <h2 class="h2">What's <span class="foil">on at Zona</span></h2>
+          <p class="sec-sub">Themes, DJs and doors for every weekend. Tap any night for the details.</p>
+        </div>
+
+        <div class="weekend reveal" id="weekend"></div>
+
+        <div class="cal-shell reveal">
+          <div class="cal-bar">
+            <div class="cal-nav">
+              <button class="icon-btn" id="calPrev" aria-label="Previous month">‹</button>
+              <h3 id="calMonth"></h3>
+              <button class="icon-btn" id="calNext" aria-label="Next month">›</button>
+            </div>
+            <div class="seg" role="tablist" aria-label="Calendar view">
+              <button role="tab" aria-selected="true" data-view="month" class="on">Month</button>
+              <button role="tab" aria-selected="false" data-view="list">Upcoming</button>
+            </div>
+          </div>
+          <div class="cal-view" id="calMonthView">
+            <div class="cal-dow"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <div class="cal-view" id="calListView" hidden>
+            <ul class="up-list" id="upList"></ul>
+          </div>
+          <p class="cal-note">Lineups can change — follow <a href="https://www.instagram.com/zonaneareno/" target="_blank" rel="noopener">@zonaneareno</a> for last-minute drops.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REELS ================= -->
+    <section class="section reels-sec" id="reels">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="kicker">Reels</p>
+          <h2 class="h2">Feel it <span class="foil">before you get here</span></h2>
+          <p class="sec-sub">Tap any reel to watch with sound.</p>
+        </div>
+        <div class="reels" id="reelGrid"></div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href="https://www.tiktok.com/@zonanea.reno" target="_blank" rel="noopener">More on TikTok</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/zonaneareno/reels/" target="_blank" rel="noopener">More on Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="section gallery-sec" id="gallery">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="kicker">Gallery</p>
+          <h2 class="h2">If you were there, <span class="foil">you already know</span></h2>
+        </div>
+        <div class="chips" id="galFilters" role="tablist" aria-label="Gallery filter">
+          <button class="chip on" data-f="all">All</button>
+          <button class="chip" data-f="nights">Nights</button>
+          <button class="chip" data-f="themes">Theme Nights</button>
+          <button class="chip" data-f="venue">The Venue</button>
+        </div>
+        <div class="masonry" id="gallery-grid">
+          <figure data-cat="venue"><img src="assets/img/entrance.jpg" alt="Zonanea marquee entrance with red carpet" loading="lazy" /></figure>
+          <figure data-cat="nights"><img src="assets/img/alerta-nacional.jpg" alt="Friends dancing under the green Zonanea sign" loading="lazy" /></figure>
+          <figure data-cat="nights"><img src="assets/img/crowd-lights.jpg" alt="Crowd with LED foam sticks on the dance floor" loading="lazy" /></figure>
+          <figure data-cat="themes"><img src="assets/img/halloween-bellako.jpg" alt="Halloween Bellako flyer" loading="lazy" /></figure>
+          <figure data-cat="venue"><img src="assets/img/marquee.jpg" alt="Zonanea neon sign and marquee announcing Halloween" loading="lazy" /></figure>
+          <figure data-cat="nights"><img src="assets/img/cheers.jpg" alt="Guests raising drinks under club lights" loading="lazy" /></figure>
+          <figure data-cat="themes"><img src="assets/img/halloween-night.jpg" alt="Costumed guest on Halloween night" loading="lazy" /></figure>
+          <figure data-cat="venue"><img src="assets/img/decks.jpg" alt="DJ decks glowing in purple light" loading="lazy" /></figure>
+          <figure data-cat="themes"><img src="assets/img/faraon.jpg" alt="La Maldición del Faraón theme night artwork" loading="lazy" /></figure>
+          <figure data-cat="nights"><img src="assets/img/dance-floor.jpg" alt="Packed dance floor at Zonanea" loading="lazy" /></figure>
+          <figure data-cat="venue"><img src="assets/img/dj-booth.jpg" alt="DJ performing in the booth" loading="lazy" /></figure>
+          <figure data-cat="themes"><img src="assets/img/logo-red.jpg" alt="Zonanea logo in Halloween red" loading="lazy" /></figure>
+        </div>
+        <div class="tag-us reveal">
+          <p>Tag <strong>@zonaneareno</strong> in your night out — your photo could be next.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIP & PRIVATE EVENTS ================= -->
+    <section class="section vip-sec" id="vip">
+      <div class="vip-bg" style="background-image:url('assets/img/cheers.jpg')"></div>
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="kicker">VIP &amp; Private Events</p>
+          <h2 class="h2">Your celebration, <span class="foil">Zona style</span></h2>
+          <p class="sec-sub">Birthdays, bachelor &amp; bachelorette parties, quinceañera after-parties, corporate nights and full buyouts. Tell us the vibe — we handle the rest.</p>
+        </div>
+        <div class="packages">
+          <article class="pkg reveal">
+            <p class="pkg-tier">Tier I</p>
+            <h3>VIP Table</h3>
+            <p class="pkg-desc">Reserved section on the floor for your crew.</p>
+            <ul>
+              <li>Reserved seating &amp; table</li>
+              <li>Bottle service</li>
+              <li>Skip-the-line entry for your group</li>
+              <li>Dedicated server</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost" data-type="VIP Table / Bottle Service">Reserve a Table</a>
+          </article>
+          <article class="pkg pkg-hot reveal">
+            <span class="pkg-badge">Most booked</span>
+            <p class="pkg-tier">Tier II</p>
+            <h3>Celebration Package</h3>
+            <p class="pkg-desc">Birthdays, bachelorette &amp; bachelor nights.</p>
+            <ul>
+              <li>Premium VIP section</li>
+              <li>Sparkler bottle presentation</li>
+              <li>DJ shout-out on the mic</li>
+              <li>Custom décor on request</li>
+            </ul>
+            <a href="#contact" class="btn btn-gold" data-type="Birthday / Celebration">Plan My Party</a>
+          </article>
+          <article class="pkg reveal">
+            <p class="pkg-tier">Tier III</p>
+            <h3>Private Event / Buyout</h3>
+            <p class="pkg-desc">The whole lounge — your rules.</p>
+            <ul>
+              <li>Full or partial venue rental</li>
+              <li>Custom bar packages</li>
+              <li>DJ, lighting &amp; theme set-up</li>
+              <li>Corporate &amp; brand events</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost" data-type="Private Event / Buyout">Request a Quote</a>
+          </article>
+        </div>
+        <p class="pkg-note reveal">Pricing depends on the night and group size — send a request and the Zonanea team will get back to you with options.</p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact-sec" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal">
+          <p class="kicker">Contact &amp; Booking</p>
+          <h2 class="h2">Let's make it <span class="foil">a night</span></h2>
+          <p class="lead">Hosting a party, booking a VIP table, planning a private event — or you're a DJ, artist or promoter who wants to work with us? Send the details and we'll reach out.</p>
+          <ul class="contact-points">
+            <li><span>📍</span><div><strong>434 N Virginia St</strong><br>Reno, NV 89501</div></li>
+            <li><span>🕘</span><div><strong>Thursday – Sunday</strong><br>Late into the morning · hours vary by event</div></li>
+            <li><span>💬</span><div><strong>Fastest reply</strong><br><a href="https://ig.me/m/zonaneareno" target="_blank" rel="noopener">DM @zonaneareno on Instagram</a></div></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>Full name<input name="name" required autocomplete="name" placeholder="Your name" /></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="(775) 000-0000" /></label>
+          </div>
+          <label>Email<input name="email" type="email" required autocomplete="email" placeholder="you@email.com" /></label>
+          <div class="form-row">
+            <label>What are you planning?
+              <select name="type" id="typeSelect" required>
+                <option value="">Choose one</option>
+                <option>VIP Table / Bottle Service</option>
+                <option>Birthday / Celebration</option>
+                <option>Bachelor / Bachelorette</option>
+                <option>Private Event / Buyout</option>
+                <option>Corporate / Brand Event</option>
+                <option>DJ / Artist / Promoter Booking</option>
+                <option>General Question</option>
+              </select>
+            </label>
+            <label>Date<input name="date" type="date" /></label>
+          </div>
+          <label>Guests
+            <select name="guests">
+              <option value="">Group size</option>
+              <option>2 – 5</option><option>6 – 10</option><option>11 – 20</option><option>21 – 50</option><option>50+</option>
+            </select>
+          </label>
+          <label>Tell us about it<textarea name="message" rows="4" required placeholder="The occasion, the vibe, any bottles or special requests…"></textarea></label>
+          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label class="check"><input type="checkbox" name="age" required /> I confirm everyone in my party is 21+</label>
+          <button class="btn btn-gold btn-block" type="submit" id="formBtn">Send Request</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= VISIT ================= -->
+    <section class="section visit-sec" id="visit">
+      <div class="wrap visit-grid">
+        <div class="map reveal">
+          <iframe title="Map to Zonanea Latin Lounge" src="https://www.google.com/maps?q=434+N+Virginia+St,+Reno,+NV+89501&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="visit-copy reveal">
+          <p class="kicker">Visit</p>
+          <h2 class="h2">Come <span class="foil">find us</span></h2>
+          <p class="script big">don't ask where I'm at…</p>
+          <p class="lead">434 N Virginia St, Reno, NV 89501 — downtown, steps from the arch.</p>
+          <dl class="hours">
+            <div><dt>Thursday</dt><dd>Open</dd></div>
+            <div><dt>Friday</dt><dd>Open</dd></div>
+            <div><dt>Saturday</dt><dd>Open</dd></div>
+            <div><dt>Sunday</dt><dd>Open</dd></div>
+            <div class="closed"><dt>Mon – Wed</dt><dd>Closed</dd></div>
+          </dl>
+          <p class="fine">Doors and closing times change with each event — check the calendar. 21+ with valid ID. Dress to impress.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://www.google.com/maps/dir//434+N+Virginia+St,+Reno,+NV+89501" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="wrap foot-grid">
+      <div class="foot-brand">
+        <img src="assets/img/logo.png" alt="Zonanea" width="90" height="90" loading="lazy" />
+        <p class="script">La Casa del Perreo</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#calendar">Calendar</a><a href="#reels">Reels</a><a href="#gallery">Gallery</a><a href="#vip">VIP &amp; Events</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/zonaneareno/" target="_blank" rel="noopener">Instagram · @zonaneareno</a>
+        <a href="https://www.tiktok.com/@zonanea.reno" target="_blank" rel="noopener">TikTok · @zonanea.reno</a>
+      </div>
+      <div>
+        <h4>Find Us</h4>
+        <p>434 N Virginia St<br>Reno, NV 89501<br>Thu – Sun · 21+</p>
+      </div>
+    </div>
+    <div class="wrap foot-base">
+      <span>© <span id="yr"></span> Zonanea Latin Lounge. Please drink responsibly.</span>
+      <span>Website by <a href="https://www.nexoradigital.live" target="_blank" rel="noopener">Nexora Digital</a></span>
+    </div>
+  </footer>
+
+  <!-- ================= MODALS ================= -->
+  <div class="modal" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="evTitle" hidden>
+    <div class="modal-card ev-card">
+      <button class="modal-x" data-close aria-label="Close">&times;</button>
+      <div id="evBody"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="reelModal" role="dialog" aria-modal="true" aria-label="Reel player" hidden>
+    <button class="modal-x" data-close aria-label="Close">&times;</button>
+    <button class="reel-nav prev" id="reelPrev" aria-label="Previous reel">‹</button>
+    <div class="reel-player">
+      <video id="reelVideo" playsinline controls></video>
+      <div class="reel-meta"><strong id="reelTitle"></strong><span id="reelCaption"></span></div>
+    </div>
+    <button class="reel-nav next" id="reelNext" aria-label="Next reel">›</button>
+  </div>
+
+  <div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="modal-x" data-close aria-label="Close">&times;</button>
+    <button class="reel-nav prev" id="lbPrev" aria-label="Previous photo">‹</button>
+    <img id="lbImg" alt="" />
+    <button class="reel-nav next" id="lbNext" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="js/data/events.js"></script>
+  <script src="js/data/reels.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
