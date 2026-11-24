@@ -271,6 +271,7 @@
     reelIdx = (i + REELS.length) % REELS.length;
     const r = REELS[reelIdx];
     rv.src = r.src; rv.poster = r.poster; rv.muted = false;
+    $(".reel-player").classList.toggle("wide", !!r.wide);
     $("#reelTitle").textContent = r.title; $("#reelCaption").textContent = r.caption || "";
     const m = $("#reelModal");
     if (m.hidden) openModal(m);

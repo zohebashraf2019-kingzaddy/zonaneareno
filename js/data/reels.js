@@ -4,6 +4,7 @@
    then add a block below. Newest first.
    ========================================================================== */
 window.ZONA_REELS = [
+  { src: "assets/reels/reel-15.mp4", poster: "assets/reels/reel-15.jpg", title: "DJ Young B", tag: "Recap", caption: "DJ Young B had Zona alive all night 😮‍💨🕺💃 Afrobeats, Latin music, Latin night.", wide: true },
   { src: "assets/reels/reel-7.mp4", poster: "assets/reels/reel-7.jpg", title: "Thanksgiving Eve", tag: "Flyer", caption: "Wed Nov 25 · 4PM–4AM · $50 off every bottle · Music by DJ La Firma. Reserve by DM @alotlikesanti." },
   { src: "assets/reels/reel-8.mp4", poster: "assets/reels/reel-8.jpg", title: "Full House", tag: "Recap", caption: "Reno, you showed up and showed out! DJ Young B brought the crazy mixes and kept the energy at an all-time high." },
   { src: "assets/reels/reel-9.mp4", poster: "assets/reels/reel-9.jpg", title: "DJ Johan Ortiz", tag: "Recap", caption: "All the way from Los Angeles — nothing but heat in the booth. Packed from start to finish." },
