@@ -7,9 +7,9 @@ Static site (HTML/CSS/JS) + one Vercel serverless function for the booking form.
 1. Import this repo in Vercel → Framework preset: **Other** → Deploy.
 2. Booking form email — Project → Settings → Environment Variables:
    - `RESEND_API_KEY` — from resend.com
-   - `CONTACT_TO_EMAIL` — club inbox (comma-separate for several)
+   - `CONTACT_TO_EMAIL` *(optional)* — club inbox; defaults to `zona.nea.nvops@gmail.com` (comma-separate for several)
    - `CONTACT_FROM_EMAIL` *(optional)* — e.g. `Zonanea <bookings@zonanea.com>` once a domain is verified in Resend
-   Until these are set, the form tells visitors to DM @zonaneareno on Instagram.
+   Until `RESEND_API_KEY` is set, the form tells visitors to email zona.nea.nvops@gmail.com or DM @zonaneareno.
 
 ## Add a night to the calendar
 Edit **`js/data/events.js`** → copy the template at the bottom of `ZONA_EVENTS`, fill in date, title, theme, DJs, doors, flyer. Commit — Vercel redeploys.

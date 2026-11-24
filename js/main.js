@@ -155,7 +155,7 @@
       if (i >= 35 && d.getMonth() !== view.getMonth()) break;
       const evs = eventsOn(d);
       const out = d.getMonth() !== view.getMonth();
-      const cls = ["cal-cell", out && "out", keyOf(d) === todayKey && "today", !OPEN_DAYS.includes(d.getDay()) && "closed"].filter(Boolean).join(" ");
+      const cls = ["cal-cell", out && "out", keyOf(d) === todayKey && "today", !OPEN_DAYS.includes(d.getDay()) && !evs.length && "closed"].filter(Boolean).join(" ");
       const chips = evs.map((e) => {
         map.push(e);
         const past = parseKey(e.date) < today;
@@ -223,7 +223,9 @@
     const rows = [
       ["Theme", esc(e.theme)],
       ["Music", djs || (e.weekly ? "Resident Zona DJs" : "")],
+      ["Sound", esc(e.sound)],
       ["Doors", esc(e.doors)],
+      ["Special", esc(e.promo)],
       ["Dress", esc(e.dress)],
       ["Entry", "21+ · Valid ID required"]
     ].filter((r) => r[1]);
@@ -352,7 +354,7 @@
       status.textContent = "¡Gracias! Your request is in — the Zonanea team will reach out soon. 💚";
     } catch (err) {
       status.className = "form-status err";
-      status.innerHTML = `We couldn't send that right now. Please <a href="https://ig.me/m/zonaneareno" target="_blank" rel="noopener">DM @zonaneareno on Instagram</a> and we'll get you set up.`;
+      status.innerHTML = `We couldn't send that right now. Please email <a href="mailto:zona.nea.nvops@gmail.com">zona.nea.nvops@gmail.com</a> or <a href="https://ig.me/m/zonaneareno" target="_blank" rel="noopener">DM @zonaneareno on Instagram</a> and we'll get you set up.`;
     } finally {
       btn.disabled = false; btn.textContent = "Send Request";
     }

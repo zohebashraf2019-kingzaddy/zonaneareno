@@ -4,7 +4,7 @@
  *
  * Set these in Vercel → Project → Settings → Environment Variables:
  *   RESEND_API_KEY     your Resend API key
- *   CONTACT_TO_EMAIL   where bookings should go (the club's email)
+ *   CONTACT_TO_EMAIL   optional — where bookings go (defaults to zona.nea.nvops@gmail.com)
  *   CONTACT_FROM_EMAIL optional, e.g. "Zonanea Website <bookings@yourdomain.com>"
  *                      (defaults to Resend's onboarding sender until a domain is verified)
  */
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
   }
 
   const key = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
+  const to = process.env.CONTACT_TO_EMAIL || "zona.nea.nvops@gmail.com";
   if (!key || !to) {
     return res.status(503).json({ error: "Email is not configured yet" });
   }
