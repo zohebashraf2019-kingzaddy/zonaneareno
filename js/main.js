@@ -342,6 +342,9 @@
   $("#lbPrev").addEventListener("click", () => stepLb(-1));
   $("#lbNext").addEventListener("click", () => stepLb(1));
 
+  /* event cards: tap highlights one (phones have no hover) */
+  $$(".cat").forEach((c) => c.addEventListener("click", () => $$(".cat").forEach((x) => x.classList.toggle("is-active", x === c))));
+
   /* ---------------- event inquiry form ---------------- */
   const form = $("#contactForm");
   const CATS = { social: "Social Celebration", corporate: "Corporate Event", rental: "Exclusive Venue Rental" };
