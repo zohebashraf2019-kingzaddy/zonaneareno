@@ -109,25 +109,6 @@ p { color: var(--muted); }
 .age-actions { display: grid; gap: 10px; margin: 22px 0 16px; }
 .age-card small { color: var(--muted); font-size: .8rem; }
 
-/* ---------- alerta toast ---------- */
-.alerta {
-  position: fixed; z-index: 120; right: 16px; bottom: 16px; width: min(360px, calc(100% - 32px));
-  padding: 14px 16px 12px; border-radius: 20px;
-  background: rgba(38, 44, 40, .72); backdrop-filter: blur(22px) saturate(1.4);
-  border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 20px 50px rgba(0, 0, 0, .55);
-  animation: drop .6s var(--ease) both;
-}
-@keyframes drop { from { opacity: 0; transform: translateY(24px) scale(.97); } }
-.alerta-head { display: flex; align-items: center; gap: 10px; }
-.alerta-head div { display: grid; line-height: 1.25; }
-.alerta-head strong { color: #fff; font-size: .98rem; }
-.alerta-head span { color: #cfd5cf; font-size: .82rem; }
-.alerta-head em { margin-left: auto; font-style: normal; font-size: .78rem; color: #b8beb8; padding-right: 22px; }
-.alerta-icon { font-size: 1.5rem; }
-.alerta p { color: #f2f2f2; margin: 10px 0; font-size: .95rem; line-height: 1.45; }
-.alerta-foot { display: block; border-top: 1px solid rgba(255, 255, 255, .12); padding-top: 9px; font-size: .82rem; color: #fff; font-weight: 600; }
-.alerta-x { position: absolute; top: 8px; right: 10px; background: none; border: 0; color: #cfd5cf; font-size: 1.4rem; line-height: 1; }
-
 /* ---------- nav ---------- */
 .nav {
   position: fixed; inset: 0 0 auto; z-index: 100; height: 76px;

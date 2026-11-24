@@ -64,17 +64,13 @@
 
   /* ---------------- age gate ---------------- */
   const gate = $("#ageGate");
-  function afterGate() { setTimeout(showAlerta, 4500); }
-  if (store.get("zona-21") === "yes") {
-    afterGate();
-  } else {
+  if (store.get("zona-21") !== "yes") {
     gate.hidden = false;
     document.body.classList.add("locked");
     $("#ageYes").addEventListener("click", () => {
       store.set("zona-21", "yes");
       gate.hidden = true;
       document.body.classList.remove("locked");
-      afterGate();
     });
   }
 
@@ -304,19 +300,6 @@
   figs.forEach((f) => f.addEventListener("click", () => openLb(visibleFigs().indexOf(f))));
   $("#lbPrev").addEventListener("click", () => stepLb(-1));
   $("#lbNext").addEventListener("click", () => stepLb(1));
-
-  /* ---------------- alerta nacional toast ---------------- */
-  function showAlerta() {
-    if (store.get("zona-alerta", true)) return;
-    const n = upcoming(1)[0];
-    if (n) {
-      const d = parseKey(n.date);
-      $("#alertaBody").innerHTML = `Existe una emergencia real. Hace falta un reggaetón.<br>Mantenga la calma. El perreo viene en camino.<br><strong>${esc(n.title)}</strong> · ${DOW_LONG[d.getDay()]} ${MONTHS[d.getMonth()].slice(0, 3)} ${d.getDate()}`;
-    }
-    $("#alerta").hidden = false;
-  }
-  $("#alertaClose").addEventListener("click", () => { $("#alerta").hidden = true; store.set("zona-alerta", "1", true); });
-  $(".alerta-foot").addEventListener("click", () => { $("#alerta").hidden = true; store.set("zona-alerta", "1", true); });
 
   /* ---------------- contact form ---------------- */
   const form = $("#contactForm");
