@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ZONANEA — EVENTS CALENDAR DATA
+   ZONA NEA LATIN LOUNGE — EVENTS CALENDAR DATA
    --------------------------------------------------------------------------
    HOW TO ADD A NIGHT:
    Copy one block inside ZONA_EVENTS, paste it, change the details, save,
@@ -26,7 +26,7 @@ window.ZONA_EVENTS = [
     djs: [{ name: "DJ Acme", ig: "itsdjacme" }, { name: "DJ Disco Lazer", ig: "djdiscolazer" }],
     doors: "4PM – 6AM",
     flyer: "assets/img/faraon.jpg",
-    desc: "La maldición se apodera de Zonanea. Una noche de misterio, música y perreo intenso hasta el amanecer."
+    desc: "La maldición se apodera de Zona Nea. Una noche de misterio, música y perreo intenso hasta el amanecer."
   },
   {
     date: "2026-11-19",
@@ -72,7 +72,7 @@ window.ZONA_EVENTS = [
     doors: "4PM – 4AM",
     flyer: "assets/img/thanksgiving-eve.jpg",
     promo: "$50 USD off every bottle",
-    desc: "The day before Thanksgiving — everyone's favorite night to go out. Zonanea is bringing the best pre-Thanksgiving party in Reno. $50 USD descuento en todas las botellas. Reserve your table now: DM @alotlikesanti.",
+    desc: "The day before Thanksgiving — everyone's favorite night to go out. Zona Nea is bringing the best pre-Thanksgiving party in Reno. $50 USD descuento en todas las botellas. VIP tables are first come, first served.",
     featured: true
   },
   {
