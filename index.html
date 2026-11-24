@@ -11,6 +11,7 @@
   <meta property="og:title" content="Zona Nea Latin Lounge · Beyond Nightlife. An Experience." />
   <meta property="og:description" content="Latin rhythms. Signature cocktails. Premium bottle service. Unforgettable nights — plus private celebrations, corporate events and venue rentals in downtown Reno." />
   <meta property="og:image" content="assets/img/entrance.jpg" />
+  <link rel="preload" as="image" href="assets/img/marble-gold.jpg" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,28 +73,32 @@
   <main id="top">
     <!-- ================= HERO ================= -->
     <section class="hero">
-      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/reels/reel-8.jpg">
-        <source src="assets/reels/reel-8.mp4" type="video/mp4" />
-      </video>
+      <div class="hero-marble" aria-hidden="true"></div>
       <div class="hero-shade"></div>
-      <span class="palm palm-hero-l" aria-hidden="true"></span>
-      <span class="palm palm-hero-r" aria-hidden="true"></span>
+      <span class="leaf leaf-hero-l" aria-hidden="true"></span>
+      <span class="leaf leaf-hero-l2" aria-hidden="true"></span>
+      <span class="leaf leaf-hero-r" aria-hidden="true"></span>
       <div class="hero-inner">
         <p class="eyebrow" data-i18n="hero.eyebrow">Downtown Reno · 21+ · Thursday – Sunday</p>
-        <img src="assets/img/logo.png" alt="Zona Nea Latin Lounge logo" class="hero-logo" width="120" height="120" />
+        <span class="rule rule-lux" aria-hidden="true"><i></i></span>
         <h1 class="hero-title">
-          <span class="foil">Zona Nea</span>
+          <span class="gold-3d">Zona Nea</span>
           <span class="hero-lounge">Latin Lounge</span>
         </h1>
-        <p class="script hero-casa">La Casa del Perreo</p>
-        <span class="rule" aria-hidden="true"><i></i></span>
+        <p class="script hero-casa"><span class="gold-script">La Casa del Perreo</span></p>
+        <svg class="swoosh" viewBox="0 0 400 24" aria-hidden="true"><defs><linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#D4AF37" stop-opacity="0"/><stop offset=".5" stop-color="#FFF4C2"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></linearGradient></defs><path d="M10 18 Q200 -4 390 18 Q200 6 10 18Z" fill="url(#sw)"/></svg>
         <p class="hero-claim" data-i18n="hero.claim">Beyond Nightlife. An Experience.</p>
         <p class="hero-tag" data-i18n="hero.tag">Latin rhythms. Signature cocktails. Premium bottle service. Unforgettable nights.</p>
-        <div class="hero-actions">
-          <a href="#events" class="btn btn-gold" data-i18n="cta.discover">Discover Upcoming Events</a>
-          <a href="#request" class="btn btn-ghost" data-i18n="cta.request">Request an Event</a>
+        <span class="rule rule-lux" aria-hidden="true"><i></i></span>
+        <div class="hero-actions hero-actions-lux">
+          <a href="#events" class="btn btn-lux btn-lux-gold"><span data-i18n="cta.discover">Discover Upcoming Events</span></a>
+          <a href="#request" class="btn btn-lux btn-lux-emerald"><span data-i18n="cta.request">Request an Event</span></a>
         </div>
-        <p class="next-up" id="nextUp" hidden><span class="next-label" data-i18n="hero.next">Next Night</span><strong id="nextTitle"></strong><span id="nextDate"></span></p>
+        <div class="next-up" id="nextUp" hidden>
+          <p class="next-label"><span data-i18n="hero.next">The Next Experience</span></p>
+          <strong id="nextTitle"></strong>
+          <span id="nextDate"></span>
+        </div>
       </div>
       <a href="#experience" class="scroll-cue" aria-label="Scroll down"><span></span></a>
     </section>
@@ -107,7 +112,7 @@
 
     <!-- ================= THE EXPERIENCE ================= -->
     <section class="section experience" id="experience">
-      <span class="palm palm-sec-r" aria-hidden="true"></span>
+      <span class="leaf leaf-sec-r" aria-hidden="true"></span>
       <div class="wrap about-grid">
         <div class="about-media reveal">
           <figure class="frame-gold">
@@ -197,7 +202,7 @@
     <!-- ================= COCKTAILS & BOTTLE SERVICE ================= -->
     <section class="section bottle-sec" id="bottle-service">
       <div class="bottle-bg" style="background-image:url('assets/img/light-show.jpg')"></div>
-      <span class="palm palm-sec-l" aria-hidden="true"></span>
+      <span class="leaf leaf-sec-l" aria-hidden="true"></span>
       <div class="wrap">
         <div class="bottle-grid">
           <div class="bottle-copy reveal">
@@ -242,7 +247,7 @@
 
     <!-- ================= PRIVATE EVENTS & VENUE RENTALS ================= -->
     <section class="section private-sec" id="private-events">
-      <span class="palm palm-sec-r" aria-hidden="true"></span>
+      <span class="leaf leaf-sec-r" aria-hidden="true"></span>
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker" data-i18n="pe.kicker">Private Events &amp; Venue Rentals</p>
@@ -335,7 +340,7 @@
 
     <!-- ================= EVENT INQUIRY ================= -->
     <section class="section contact-sec" id="request">
-      <span class="palm palm-sec-l" aria-hidden="true"></span>
+      <span class="leaf leaf-sec-l" aria-hidden="true"></span>
       <div class="wrap contact-grid">
         <div class="contact-copy reveal">
           <p class="kicker" data-i18n="rq.kicker">Event Inquiries</p>
@@ -457,7 +462,7 @@
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <span class="palm palm-foot" aria-hidden="true"></span>
+    <span class="leaf leaf-foot" aria-hidden="true"></span>
     <div class="wrap foot-grid">
       <div class="foot-brand">
         <img src="assets/img/logo.png" alt="Zona Nea Latin Lounge" width="80" height="80" loading="lazy" />

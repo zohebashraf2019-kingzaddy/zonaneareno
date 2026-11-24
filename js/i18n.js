@@ -25,7 +25,7 @@ window.ZONA_ES = {
   "hero.eyebrow": "Centro de Reno · 21+ · Jueves – Domingo",
   "hero.claim": "Más que vida nocturna. Una experiencia.",
   "hero.tag": "Ritmos latinos. Cócteles de autor. Servicio de botella premium. Noches inolvidables.",
-  "hero.next": "Próxima Noche",
+  "hero.next": "La Próxima Experiencia",
 
   "tick.cocktails": "Cócteles de Autor",
   "tick.bottle": "Servicio de Botella",
